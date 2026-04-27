@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Animado - Quadrados</title>
+    <style>
+        /* Configurações básicas do corpo */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Cinza bem escuro */
+            overflow: hidden; /* Impede barras de rolagem */
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Container da animação */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Garante que fique atrás do conteúdo */
+        }
+
+        .squares {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo base de cada quadrado */
+        .squares li {
+            position: absolute;
+            display: block;
+            background: rgba(255, 255, 255, 0.596); /* Branco com transparência para um efeito suave */
+            bottom: -150px; /* Começa abaixo da tela */
+            animation: subir 20s linear infinite;
+        }
+
+        /* Keyframes para subir, rodar e dar fade out */
+        @keyframes subir {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(720deg); /* Sobe e gira 2 vezes */
+                opacity: 0; /* Efeito Fade Out */
+                border-radius: 20%; /* Arredonda levemente ao sumir */
+            }
+        }
+
+        /* Variações de tamanho, posição e velocidade para cada quadrado */
+        /* Quadrado 1 */
+        .squares li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+
+        /* Quadrado 2 */
+        .squares li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+
+        /* Quadrado 3 */
+        .squares li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+
+        /* Quadrado 4 */
+        .squares li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+
+        /* Quadrado 5 */
+        .squares li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+
+        /* Quadrado 6 */
+        .squares li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+
+        /* Quadrado 7 */
+        .squares li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+
+        /* Quadrado 8 */
+        .squares li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+
+        /* Quadrado 9 */
+        .squares li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+
+        /* Quadrado 10 */
+        .squares li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
+
+    </style>
+
+ <style>
+    /* ... (Mantenha o CSS dos quadrados e do body igual ao anterior) ... */
+
+    /* Novo estilo para o container de texto */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .content h1 {
+        display: inline-block; /* Faz a borda envolver apenas o texto */
+        border-top: 2px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+        padding: 5px 20px; /* O primeiro valor (5px) controla a distância dos traços */
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        margin-top: 15px;
+        font-weight: 300;
+        opacity: 0.7;
+        letter-spacing: 2px;
+    }
+</style>
+
+<body>
+    <div class="BACKGROUND ANIMATION">
+        <ul class="squares">
+            <li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>BACKGROUND ANIMATION</h1>
+     
+    </div>
+</body>
+ </style>
+</html>
